@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>MakeAPost</title>
+    </head>
+    <body style="background-color:#B9C5D0;">
+        <h6>userId: 1</h6>
+        <h4>Welcome, Jeremy</h4>
+        <form class="d-flex justify-content-center" id="form" method="post">
+            <input type="text" id="name" placeholder="Name"/>
+            <input type="text" id="body" placeholder="Type your post here!"/>
+            <input type="number" id="id" placeholder="userId"/>
+            <input type="submit" class="btn btn-primary" value="Make Post" />
+        </form>
+        <div class="d-flex justify-content-center" id="results">
+
+        </div>
+    </body>
+    <script>
+        var form = document.getElementById('form')
+
+        form.addEventListener('submit', function(e){
+
+
+            e.preventDefault()
+
+            var name = document.getElementById('name').value
+            var body = document.getElementById('body').value
+            var id = document.getElementById('id').value
+
+            fetch('https://jsonplaceholder.typicode.com/posts',{
+                method:'POST',
+                body:JSON.stringify({
+                    title:name,
+                    body:body,
+                    id:id
+                }),
+                headers: {
+                    "Content-Type":"application/json; charset=UTF-8"
+                }
+        })
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(data){
+            console.log(data)
+            var results = document.getElementById('results')
+
+            results.innerHTML = `<a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">${data.title}</a>
+            <h6>${data.body}<h6>`
+        })
+    })
+    </script>
+</html>

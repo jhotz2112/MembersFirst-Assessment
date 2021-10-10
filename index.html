@@ -37,10 +37,9 @@
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        
+
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <h6>Hello, Jeremy</h6>
                                 <li class="nav-item active">
                                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                 </li>
@@ -71,7 +70,64 @@
                         </div>
                     </nav>
                 </div>
+                <br>
 
+                <h4>Hello, Jeremy</h4>
+
+                <br>
+                <h5 class="card-title text-center">User 1's Posts</h5>
+
+
+                <!-- post table -->
+                <table class="table table-primary table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Content</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">This is a Test</a>
+                        </td>
+                        <td>
+                            <div class="truncate">
+                                I really want this job
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">Hire me?</a>
+                        </td>
+                        <td>
+                            <div class="truncate">
+                                Hello World I am a computer!
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">Cup & String
+                                Tutorial</a>
+                        </td>
+                        <td>
+                            <div class="truncate">
+                                This is how you build a string and cup phone!
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="resultsName">
+                            </div>
+                        </td>
+                        <td>
+                            <div id="resultsContent">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
 
                 <!-- Post Modal -->
                 <div class="modal fade" id="add" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -97,7 +153,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <input type="submit" class="btn btn-primary" value="Make Post" />
+                                        <button type="submit" class="btn btn-primary">Post!</button>
                                     </div>
                                 </div>
                             </form>
@@ -113,62 +169,9 @@
                                 a Post!</button>
                         </div>
                     </div>
-                    <br>
-                    <h5 class="card-title">User 1's Posts</h5>
-
-
-                    <!-- post table -->
-                    <table class="table table-primary table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">Title</th>
-                                <th scope="col">Content</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>
-                                <a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">This is a Test</a>
-                            </td>
-                            <td>
-                                <div class="truncate">
-                                I really want this job
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">Hire me?</a>
-                            </td>
-                            <td>
-                                <div class="truncate">
-                                Hello World I am a computer!
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="https://www.youtube.com/watch?v=4S7nG6S1isM" target="_blank">Cup & String Tutorial</a>
-                            </td>
-                            <td>
-                                <div class="truncate">
-                                This is how you build a string and cup phone!
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div id="resultsName">
-                                </div>
-                            </td>
-                            <td>
-                                <div id="resultsContent">
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
                 </div>
 
-
+                <!-- JavaScript -->
 
                 <script>
                     var form = document.getElementById('form')
